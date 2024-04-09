@@ -1,14 +1,17 @@
 {% load static %}
+{% load chunks %}
 <div class="small-container">
     <div class="row row-2">
         <h2>All Products</h2>
-        <select>
+        <!-- <select>
             <option>Default Sort</option>
             <option>Sort By Price</option>
             <option>Sort By Popularity</option>
             <option>Sort By Rating</option>
             <option>Sort By Sale</option>
-        </select>
+        </select> -->
+    {% for product_chunks products|chunks:4}
+    <!-- it returns iterable -->
     </div>
     <div class="row">
         <div class="col-4">
@@ -60,7 +63,9 @@
             <p>$50.00</p>
         </div>
     </div>
-    <div class="row">
+    {% endfor %}
+
+    <!-- <div class="row">
         <div class="col-4">
             <img src="{% static 'images/product-5.jpg' %}">
             <h4>Red Printed T-Shirt</h4>
@@ -159,7 +164,7 @@
             </div>
             <p>$50.00</p>
         </div>
-    </div>
+    </div> -->
     <div class="page-btn">
         <span>1</span>
         <span>2</span>
