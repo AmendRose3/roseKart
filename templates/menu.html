@@ -1,21 +1,33 @@
-{% load static %} <!-- Load static files to use the 'static' template tag -->
+{% load static %}
+<!-- Load static files to use the 'static' template tag -->
 
 <div class="navbar">
-    <div class="logo">
-        <!-- Link to home page using the static 'images/logo.png' -->
-        <a href="{% url 'home' %}"><img src="{% static 'images/logo.png'%}" alt="logo" width="125px"></a>
-    </div>
-    <nav>
-        <ul id="MenuItems">
-            <!-- Link to home page -->
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <!-- Link to product list page -->
-            <li><a href="{% url 'list_product' %}">Products</a></li>
-            <li><a href="{% url 'account' %}">Account</a></li>
-        </ul>
-    </nav>
-    <!-- Link to cart page using static 'images/cart.png' -->
-    <a href="{% url 'cart' %}"><img src="{% static 'images/cart.png'%}" width="30px" height="30px"></a>
-    <!-- Menu icon with onclick event to toggle menu -->
-    <img src="{% static 'images/menu.png'%}" class="menu-icon" onclick="menutoggle()">
+  <div class="logo">
+    <!-- Link to home page using the static 'images/logo.png' -->
+    <a href="{% url 'home' %}"
+      ><img
+        src="{% static 'css/images/rosekart.png'%}"
+        alt="logo"
+        width="125px"
+    /></a>
+  </div>
+  <nav>
+    <ul id="MenuItems">
+      <!-- Link to home page -->
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <!-- Link to product list page -->
+      <li><a href="{% url 'list_product' %}">Products</a></li>
+      <li><a href="{% url 'account' %}">Account</a></li>
+    </ul>
+  </nav>
+  <!-- Link to cart page using static 'images/cart.png' -->
+  <a href="{% url 'cart' %}"
+    ><img src="{% static 'css/images/cart.png'%}" width="30px" height="30px"
+  /></a>
+  <!-- Menu icon with onclick event to toggle menu -->
+  <img
+    src="{% static 'css/images/menu.png'%}"
+    class="menu-icon"
+    onclick="menutoggle()"
+  />
 </div>

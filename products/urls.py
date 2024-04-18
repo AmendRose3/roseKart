@@ -7,7 +7,8 @@ from.import views
 urlpatterns = [
     # Homepage 
     path('', views.index, name='home'),
-    path('product_list', views.list_products, name='list_product'),
-    path('product_details', views.detail_product, name='detail_product')
+    path('product_list/', views.list_products, name='list_product'),
+     path('product_details/<int:pk>/', views.detail_product, name='detail_product'),
+
 ]
 
